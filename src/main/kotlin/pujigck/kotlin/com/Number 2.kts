@@ -3,16 +3,19 @@
  */
 package com.pujigck.kotlin
 
-class User(val char: String, val num: Int) {
-    override fun toString(): String {
-        return "{$char, $num}"
-    }
-}
+data class ArrayOfNumber(val index: Int, val value: Char)
 
 fun main() {
-    val list = mutableListOf(User("A", 10), User("C", 20), User( "B", 30))
+  val numchar = arrayOf(
+        ArrayOfNumber(2, 'd'),
+        ArrayOfNumber(3, 'c'),
+        ArrayOfNumber(1, 'a'),
+        ArrayOfNumber(5, 'b'),
+        ArrayOfNumber(4, 'e')
+  )
+    val sortedNumchar= numchar.sortedBy{ it.index }
 
-    list.sortedBy { it.id }
-    list.sortedBy { it.char }
-    println(list)
+    for{ArrayOfNumchar in sortedNumchar}{
+        println("${ArrayOfNumber.index}. ${ArrayOfNumchar.value}")
+    }
 }
