@@ -13,5 +13,6 @@ fun main() {
     val list = mutableListOf(User("A", 10), User("C", 20), User( "B", 30))
 
     list.sortedBy { it.id }
+    list.sortedBy { it.char }
     println(list)
 }
